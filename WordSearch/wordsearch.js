@@ -1,5 +1,6 @@
 ﻿import { showVictoryScreen } from '../Shared/victoryScreen.js';
 import { currentLang, loadTranslations, translateUI } from '../Shared/language.js';
+import { saveConfig, loadConfig } from '../Shared/configStore.js';
 
 let words = [];
 let allCategories = {};
@@ -174,16 +175,31 @@ function giveHint() {
 }
 
 function initGame() {
+  const categorySelect = document.getElementById("categorySelect");
+  const difficultySelect = document.getElementById("difficultySelect");
+  const widthInput = document.getElementById("gridWidth");
+  const heightInput = document.getElementById("gridHeight");
+  const wordCountInput = document.getElementById("wordCount");
+
+  const settings = {
+    category: categorySelect.value,
+    difficulty: difficultySelect.value,
+    width: parseInt(widthInput.value),
+    height: parseInt(heightInput.value),
+    count: parseInt(wordCountInput.value)
+  };
+
+  saveConfig("wordsearch", settings);
+
+  gridWidth = settings.width;
+  gridHeight = settings.height;
+  wordCount = settings.count;
+
   document.getElementById("hintControls").style.display = "block";
 
-  const selectedCategory = document.getElementById("categorySelect").value;
-  gridWidth = parseInt(document.getElementById("gridWidth").value);
-  gridHeight = parseInt(document.getElementById("gridHeight").value);
-  wordCount = parseInt(document.getElementById("wordCount").value);
-
-  let categoryWords = selectedCategory === "__RANDOM__"
+  let categoryWords = settings.category === "__RANDOM__"
     ? [...new Set(Object.values(allCategories[currentLang]).flat())]
-    : allCategories[currentLang][selectedCategory] || [];
+    : allCategories[currentLang][settings.category] || [];
 
   words = categoryWords
     .filter(word => wordFitsGrid(word.toUpperCase()))
@@ -269,6 +285,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   translations = await loadTranslations('translations.json');
   await loadCategories();
   translateUI();
+
+  const defaults = {
+    category: "__RANDOM__",
+    difficulty: "easy",
+    width: 10,
+    height: 10,
+    count: 4
+  };
+
+  const restored = loadConfig("wordsearch", defaults);
+  document.getElementById("categorySelect").value = restored.category;
+  document.getElementById("difficultySelect").value = restored.difficulty;
+  document.getElementById("gridWidth").value = restored.width;
+  document.getElementById("gridHeight").value = restored.height;
+  document.getElementById("wordCount").value = restored.count;
 
   document.getElementById("startButton")?.addEventListener("click", initGame);
   document.getElementById("toggleAdvanced")?.addEventListener("click", toggleAdvancedSettings);

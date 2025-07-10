@@ -1,5 +1,6 @@
 ﻿import { showVictoryScreen } from '../Shared/victoryScreen.js';
 import { currentLang, loadTranslations, translateUI } from '../Shared/language.js';
+import { saveConfig, loadConfig } from '../Shared/configStore.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
   const emojiThemes = {
@@ -43,10 +44,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   populateThemeSelect();
 
+  const defaultConfig = {
+    theme: 'animals',
+    difficulty: 'medium',
+    peekAtStart: false
+  };
+
+  let currentSettings = loadConfig("memory", defaultConfig);
+
+  // Restore UI
+  themeSelect.value = currentSettings.theme;
+  difficultySelect.value = currentSettings.difficulty;
+  peekToggle.checked = currentSettings.peekAtStart;
+
   let flippedCards = [];
   let lockBoard = false;
   let missCount = 0;
-  let currentSettings = {};
 
   const difficultyMap = {
     easy: 4,
@@ -68,6 +81,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       difficulty: difficultySelect.value,
       peekAtStart: peekToggle.checked
     };
+    saveConfig("memory", currentSettings);
     initGame();
   });
 
