@@ -1,0 +1,42 @@
+﻿{
+  "en": {
+    "title": "Emoji Memory Game 🃏",
+    "chooseTheme": "Choose Theme:",
+    "difficulty": "Difficulty:",
+    "easy": "Easy (4 pairs)",
+    "medium": "Medium (8 pairs)",
+    "hard": "Hard (12 pairs)",
+    "extreme": "Extreme (16 pairs)",
+    "peek": "Peek at cards on start",
+    "startGame": "Start Game",
+    "misses": "Misses",
+    "match": "🎉 Match found!",
+    "noMatch": "❌ Not a match...",
+    "victory": "🏆 You won! All matches found!",
+    "theme_animals": "Animals",
+    "theme_food": "Food",
+    "theme_faces": "Faces",
+    "theme_travel": "Travel",
+    "theme_spooky": "Spooky"
+  },
+  "de": {
+    "title": "Emoji Gedächtnisspiel 🃏",
+    "chooseTheme": "Thema wählen:",
+    "difficulty": "Schwierigkeit:",
+    "easy": "Einfach (4 Paare)",
+    "medium": "Mittel (8 Paare)",
+    "hard": "Schwer (12 Paare)",
+    "extreme": "Extrem (16 Paare)",
+    "peek": "Karten zu Beginn anzeigen",
+    "startGame": "Spiel starten",
+    "misses": "Fehlversuche",
+    "match": "🎉 Treffer!",
+    "noMatch": "❌ Kein Treffer...",
+    "victory": "🏆 Du hast gewonnen! Alle Paare gefunden!",
+    "theme_animals": "Tiere",
+    "theme_food": "Essen",
+    "theme_faces": "Gesichter",
+    "theme_travel": "Reisen",
+    "theme_spooky": "Gruselig"
+  }
+}

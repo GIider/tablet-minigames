@@ -1,0 +1,71 @@
+/* index.css - styles specific to the index.html game hub */
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+body {
+  font-family: sans-serif;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.lang-toggle {
+  margin-left: auto;
+  margin-right: 1rem;
+  background: #333;
+  border: none;
+  color: white;
+  font-size: 1.4rem; /* bigger emoji */
+  padding: 0.6em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.lang-toggle:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+
+.game-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.game-card {
+  background: #2a2a2a;
+  border: 2px solid #444;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  width: 160px;
+  transition: transform 0.2s, background 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.game-card:hover {
+  background: #3c3c3c;
+  transform: translateY(-5px);
+}
+
+.game-card .emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.game-card .label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}

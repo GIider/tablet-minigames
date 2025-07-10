@@ -1,36 +1,16 @@
-{
+﻿{
   "en": {
-    "title": "🌙 Word Search",
-    "category": "📚 Category:",
-    "width": "🔲 Width:",
-    "height": "🔳 Height:",
-    "wordCount": "🔍 Word Count:",
-    "start": "🎮 Start Game",
-    "toFind": "🔍 To Find",
-    "found": "✅ Found",
-    "hint": "💡 Hint",
-    "completed": "🎉 All words found! Restarting...",
-    "random": "🎲 Random",
-    "difficulty": "🧠 Difficulty:",
-    "easy": "😌 Easy",
-    "medium": "🤔 Medium",
-    "hard": "🔥 Hard"
+    "hubTitle": "🎮 Mini Game Hub",
+    "welcome": "🎯 Welcome to Mini Game Hub",
+    "selectGame": "Select a game to play:",
+    "wordSearch": "Word Search",
+    "memoryMatch": "Memory Match"
   },
   "de": {
-    "title": "🌙 Wortsuche",
-    "category": "📚 Kategorie:",
-    "width": "🔲 Breite:",
-    "height": "🔳 Höhe:",
-    "wordCount": "🔍 Wörter:",
-    "start": "🎮 Spiel starten",
-    "toFind": "🔍 Zu finden",
-    "found": "✅ Gefunden",
-    "hint": "💡 Hinweis",
-    "completed": "🎉 Alle Wörter gefunden! Spiel wird neu gestartet...",
-    "random": "🎲 Zufällig",
-    "difficulty": "🧠 Schwierigkeit:",
-    "easy": "😌 Einfach",
-    "medium": "🤔 Mittel",
-    "hard": "🔥 Schwer"
+    "hubTitle": "🎮 Mini-Spielzentrale",
+    "welcome": "🎯 Willkommen in der Mini-Spielzentrale",
+    "selectGame": "Wähle ein Spiel:",
+    "wordSearch": "Wortsuche",
+    "memoryMatch": "Gedächtnisspiel"
   }
 }

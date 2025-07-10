@@ -1,0 +1,24 @@
+.game-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #111;
+  border-bottom: 1px solid #333;
+  gap: 1rem; /* adds spacing between back and lang button */
+}
+
+.back-link {
+  color: #fff;
+  font-size: 1.4rem; /* bigger */
+  text-decoration: none;
+  background: #444;
+  padding: 0.6em 1.2em; /* more padding */
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.back-link:hover {
+  background: #666;
+  transform: scale(1.05); /* subtle hover effect */
+}
