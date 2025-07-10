@@ -2,6 +2,26 @@
 import { currentLang, loadTranslations, translateUI } from '../Shared/language.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
+  const emojiThemes = {
+    animals: ["🐶", "🐱", "🐭", "🐰", "🦊", "🐻", "🐼", "🐸", "🐨", "🐯", "🦁", "🐷", "🦝", "🦓", "🦍", "🐵"],
+    food: ["🍕", "🍔", "🍟", "🍩", "🍓", "🍇", "🍎", "🍰", "🍪", "🥦", "🍉", "🍣", "🍜", "🥞", "🌮", "🍌"],
+    faces: ["😀", "😍", "😜", "🤔", "😎", "🥶", "😱", "😡", "😭", "🤪", "🥳", "😴", "😇", "🤯", "😷", "😈"],
+    travel: ["✈️", "🚗", "🚢", "🚀", "🏝️", "🗽", "🗻", "⛺", "🚂", "🚌", "🚉", "🛶", "🚁", "🚲", "🚤", "🛫"],
+    spooky: ["🎃", "👻", "☠️", "🧛", "🕷️", "🕸️", "🦇", "🧟", "🪦", "🧙", "🩸", "🧞", "🫥", "🫣", "🫧", "🕯️"],
+    science: ["🔬", "🧬", "⚗️", "🔭", "🛰️", "🚀", "🌌", "🧪", "🧫", "📡", "💡", "📘", "📊", "🌡️", "🌍", "📎"],
+    sports: ["⚽", "🏀", "🏈", "⚾", "🎾", "🏐", "🥏", "🏓", "🏸", "🥊", "🥋", "🎮", "🎯", "♟️", "🎲", "🧩"],
+    nature: ["🌸", "🌼", "🌻", "🌺", "🌷", "🌹", "🌲", "🌳", "🌵", "🍂", "🍁", "🌞", "🌈", "🌧️", "❄️", "🌪️"],
+    fantasy: ["🧙", "🧝", "🧚", "🧞", "🧟", "🧛", "🐉", "🐲", "🦄", "🗡️", "🛡️", "📜", "🕯️", "🔮", "🏰", "⚔️"],
+    jobs: ["👨‍⚕️", "👩‍⚕️", "👨‍🏫", "👩‍🏫", "👨‍🍳", "👩‍🍳", "👨‍🚒", "👩‍🚒", "👨‍🔬", "👩‍🔬", "👨‍💻", "👩‍💻", "👨‍🚀", "👩‍🚀", "👨‍✈️", "👩‍✈️"]
+  };
+
+  const board = document.getElementById("gameBoard");
+  const missesDisplay = document.getElementById("misses");
+  const startBtn = document.getElementById("startBtn");
+  const themeSelect = document.getElementById("themeSelect");
+  const difficultySelect = document.getElementById("difficultySelect");
+  const peekToggle = document.getElementById("peekToggle");
+
   // Load header
   const header = await fetch('../Shared/header.html').then(res => res.text());
   document.getElementById('sharedHeader').innerHTML = header;
@@ -10,26 +30,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   const translations = await loadTranslations('translations.json');
   translateUI();
 
-  const board = document.getElementById("gameBoard");
-  const status = document.getElementById("status");
-  const missesDisplay = document.getElementById("misses");
-  const startBtn = document.getElementById("startBtn");
-  const themeSelect = document.getElementById("themeSelect");
-  const difficultySelect = document.getElementById("difficultySelect");
-  const peekToggle = document.getElementById("peekToggle");
+  function populateThemeSelect() {
+    themeSelect.innerHTML = "";
+    Object.keys(emojiThemes).forEach(key => {
+      const option = document.createElement("option");
+      option.value = key;
+      const translationKey = `theme_${key}`;
+      option.textContent = translations[currentLang][translationKey] || key;
+      themeSelect.appendChild(option);
+    });
+  }
+
+  populateThemeSelect();
 
   let flippedCards = [];
   let lockBoard = false;
   let missCount = 0;
   let currentSettings = {};
-
-  const emojiThemes = {
-    animals: ["🐶", "🐱", "🐭", "🐰", "🦊", "🐻", "🐼", "🐸", "🐨", "🐯", "🦁", "🐷", "🦝", "🦓", "🦍", "🐵"],
-    food: ["🍕", "🍔", "🍟", "🍩", "🍓", "🍇", "🍎", "🍰", "🍪", "🥦", "🍉", "🍣", "🍜", "🥞", "🌮", "🍌"],
-    faces: ["😀", "😍", "😜", "🤔", "😎", "🥶", "😱", "😡", "😭", "🤪", "🥳", "😴", "😇", "🤯", "😷", "😈"],
-    travel: ["✈️", "🚗", "🚢", "🚀", "🏝️", "🗽", "🗻", "⛺", "🚂", "🚌", "🚉", "🛶", "🚁", "🚲", "🚤", "🛫"],
-    spooky: ["🎃", "👻", "☠️", "🧛", "🕷️", "🕸️", "🦇", "🧟", "🪦", "🧙", "🩸", "🧞", "🫥", "🫣", "🫧", "🕯️"]
-  };
 
   const difficultyMap = {
     easy: 4,
@@ -78,7 +95,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     board.innerHTML = "";
     flippedCards = [];
     lockBoard = false;
-    status.textContent = "";
   }
 
   function updateMissDisplay() {
@@ -146,18 +162,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       second.classList.add("matched");
       flippedCards = [];
       lockBoard = false;
-      status.textContent = translations[currentLang].match;
       checkWin();
     } else {
       missCount++;
       updateMissDisplay();
-      status.textContent = translations[currentLang].noMatch;
       setTimeout(() => {
         first.classList.remove("flipped");
         second.classList.remove("flipped");
         flippedCards = [];
         lockBoard = false;
-        status.textContent = "";
       }, 1000);
     }
   }
