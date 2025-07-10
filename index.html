@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Search Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 data-i18n="title">🌙 Word Search</h1>
+
+  <div id="controls" class="config-panel">
+    <div class="control-row">
+      <label for="categorySelect" data-i18n="category">📚 Category:</label>
+      <select id="categorySelect"></select>
+    </div>
+
+    <div class="control-row flex">
+      <button onclick="initGame()" data-i18n="start">🎮 Start Game</button>
+      <div class="button-group">
+        <button id="toggleAdvanced" onclick="toggleAdvancedSettings()">⚙️</button>
+        <button id="languageButton" onclick="toggleLanguage()">🇬🇧</button>
+      </div>
+    </div>
+
+    <div id="advancedSettings" style="display: none;">
+      <table class="config-table">
+        <tr>
+          <td><label for="gridWidth" data-i18n="width">🔲 Width:</label></td>
+          <td><input type="number" id="gridWidth" value="10" min="5" max="30"></td>
+        </tr>
+        <tr>
+          <td><label for="gridHeight" data-i18n="height">🔳 Height:</label></td>
+          <td><input type="number" id="gridHeight" value="10" min="5" max="30"></td>
+        </tr>
+        <tr>
+          <td><label for="wordCount" data-i18n="wordCount">🔍 Word Count:</label></td>
+          <td><input type="number" id="wordCount" value="4" min="1" max="50"></td>
+        </tr>
+        <tr>
+          <td><label for="difficultySelect" data-i18n="difficulty">🧠 Difficulty:</label></td>
+          <td>
+            <select id="difficultySelect">
+              <option value="easy" data-i18n="easy">😌 Easy</option>
+              <option value="medium" data-i18n="medium">🤔 Medium</option>
+              <option value="hard" data-i18n="hard">🔥 Hard</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div id="gameWrapper">
+    <div class="side-list">
+      <h3 data-i18n="toFind">🔍 To Find</h3>
+      <div id="wordListToFind"></div>
+      <div id="hintControls" style="display: none;">
+        <button onclick="giveHint()" data-i18n="hint">💡 Hint</button>
+      </div>
+    </div>
+
+    <div id="gridContainer">
+      <div id="grid"></div>
+    </div>
+  </div>
+
+  <div id="victoryScreen">
+    <canvas id="confettiCanvas"></canvas>
+    <div id="victoryMessage">🎉 You won! 🎉</div>
+    <button id="skipVictory">⏭️</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

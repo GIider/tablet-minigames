@@ -1,0 +1,28 @@
+﻿{
+  "en": {
+    "🎨 Colors": ["Red", "Blue", "Green", "Yellow", "Black", "White", "Orange", "Purple", "Pink", "Brown", "Gray", "Cyan", "Magenta", "Beige", "Turquoise", "Maroon", "Teal", "Lavender", "Olive", "Gold"],
+    "🌍 Countries": ["Germany", "France", "Italy", "Spain", "Brazil", "Japan", "Canada", "India", "China", "Mexico", "Australia", "Russia", "Norway", "Sweden", "Argentina", "Egypt", "Greece", "South Korea", "United Kingdom", "Netherlands"],
+    "🏅 Sports": ["Soccer", "Tennis", "Basketball", "Baseball", "Hockey", "Golf", "Swimming", "Running", "Cycling", "Boxing", "Wrestling", "Skiing", "Snowboarding", "Surfing", "Volleyball", "Badminton", "Cricket", "Fencing", "Rowing", "Karate"],
+    "🚗 Vehicles": ["Car", "Bike", "Bus", "Truck", "Train", "Boat", "Plane", "Scooter", "Subway", "Tram", "Helicopter", "Taxi", "Skateboard", "Van", "Yacht", "Motorcycle", "RV", "Ferry", "Segway", "Monorail"],
+    "🧠 Body Parts": ["Head", "Arm", "Leg", "Hand", "Foot", "Eye", "Ear", "Nose", "Mouth", "Back", "Shoulder", "Neck", "Knee", "Elbow", "Toes", "Fingers", "Chest", "Wrist", "Hip", "Ankle"],
+    "👕 Clothing": ["Shirt", "Pants", "Skirt", "Dress", "Shoes", "Socks", "Jacket", "Hat", "Gloves", "Scarf", "Sweater", "Belt", "Shorts", "Coat", "Tie", "Blouse", "Cap", "Boots", "Vest", "Hoodie"],
+    "👩‍⚕️ Occupations": ["Doctor", "Teacher", "Farmer", "Pilot", "Chef", "Police", "Firefighter", "Engineer", "Artist", "Nurse", "Scientist", "Librarian", "Musician", "Actor", "Mechanic", "Dentist", "Plumber", "Writer", "Architect", "Judge"],
+    "📚 School Supplies": ["Pen", "Pencil", "Notebook", "Eraser", "Ruler", "Backpack", "Marker", "Glue", "Scissors", "Paper", "Crayons", "Calculator", "Highlighter", "Clipboard", "Folder", "Compass", "Binder", "Sharpener", "Tape", "Whiteboard"],
+    "🧚‍♀️ Fairy Tale Characters": ["Cinderella", "Snow White", "Rapunzel", "Little Red Riding Hood", "Hansel", "Gretel", "The Frog Prince", "Sleeping Beauty", "Rumpelstiltskin", "Pinocchio", "Peter Pan", "Tinkerbell", "The Little Mermaid", "Beast", "Beauty", "Aladdin", "Jasmine", "Genie", "Jack", "The Giant"],
+    "🎸 Rock & Roll": ["Guitar", "Drums", "Bass", "Microphone", "Elvis", "Stage", "Concert", "Leather", "Band", "Solo", "Amplifier", "Chords", "Rockstar", "Vinyl", "Roadie", "Tour", "Setlist", "Encore", "Lyrics", "Headbang"],
+    "🍳 Cooking": ["Pan", "Knife", "Oven", "Salt", "Pepper", "Recipe", "Chef", "Spatula", "Pot", "Whisk", "Grater", "Blender", "Bowl", "Measuring Cup", "Ladle", "Timer", "Tongs", "Colander", "Peeler", "Rolling Pin"]
+  },
+  "de": {
+    "🎨 Farben": ["Rot", "Blau", "Grün", "Gelb", "Schwarz", "Weiß", "Orange", "Lila", "Rosa", "Braun", "Grau", "Cyan", "Magenta", "Beige", "Türkis", "Weinrot", "Petrol", "Lavendel", "Oliv", "Gold"],
+    "🌍 Länder": ["Deutschland", "Frankreich", "Italien", "Spanien", "Brasilien", "Japan", "Kanada", "Indien", "China", "Mexiko", "Australien", "Russland", "Norwegen", "Schweden", "Argentinien", "Ägypten", "Griechenland", "Südkorea", "England", "Niederlande"],
+    "🏅 Sportarten": ["Fußball", "Tennis", "Basketball", "Baseball", "Hockey", "Golf", "Schwimmen", "Laufen", "Radfahren", "Boxen", "Ringen", "Skifahren", "Snowboarden", "Surfen", "Volleyball", "Badminton", "Cricket", "Fechten", "Rudern", "Karate"],
+    "🚗 Fahrzeuge": ["Auto", "Fahrrad", "Bus", "Lkw", "Zug", "Boot", "Flugzeug", "Roller", "U-Bahn", "Straßenbahn", "Hubschrauber", "Taxi", "Skateboard", "Van", "Yacht", "Motorrad", "Wohnmobil", "Fähre", "Segway", "Monorail"],
+    "🧠 Körperteile": ["Kopf", "Arm", "Bein", "Hand", "Fuß", "Auge", "Ohr", "Nase", "Mund", "Rücken", "Schulter", "Nacken", "Knie", "Ellbogen", "Zeh", "Finger", "Brust", "Handgelenk", "Hüfte", "Knöchel"],
+    "👕 Kleidung": ["Hemd", "Hose", "Rock", "Kleid", "Schuhe", "Socken", "Jacke", "Hut", "Handschuhe", "Schal", "Pullover", "Gürtel", "Shorts", "Mantel", "Krawatte", "Bluse", "Mütze", "Stiefel", "Weste", "Kapuze"],
+    "👩‍⚕️ Berufe": ["Arzt", "Lehrer", "Bauer", "Pilot", "Koch", "Polizist", "Feuerwehrmann", "Ingenieur", "Künstler", "Krankenschwester", "Wissenschaftler", "Bibliothekar", "Musiker", "Schauspieler", "Mechaniker", "Zahnarzt", "Klempner", "Autor", "Architekt", "Richter"],
+    "📚 Schulsachen": ["Stift", "Bleistift", "Heft", "Radiergummi", "Lineal", "Rucksack", "Marker", "Kleber", "Schere", "Papier", "Buntstifte", "Taschenrechner", "Textmarker", "Klemmbrett", "Ordner", "Zirkel", "Ringbuch", "Anspitzer", "Klebeband", "Tafel"],
+    "🧚‍♀️ Märchenfiguren": ["Aschenputtel", "Schneewittchen", "Rapunzel", "Rotkäppchen", "Hänsel", "Gretel", "Froschkönig", "Dornröschen", "Rumpelstilzchen", "Pinocchio", "Peter Pan", "Glöckchen", "Arielle", "Biest", "Schöne", "Aladdin", "Jasmin", "Geist", "Hans", "Riese"],
+    "🎸 Rock & Roll": ["Gitarre", "Schlagzeug", "Bass", "Mikrofon", "Elvis", "Bühne", "Konzert", "Leder", "Band", "Solo", "Verstärker", "Akkorde", "Rockstar", "Schallplatte", "Roadie", "Tour", "Setliste", "Zugabe", "Text", "Headbangen"],
+    "🍳 Kochen": ["Pfanne", "Messer", "Ofen", "Salz", "Pfeffer", "Rezept", "Koch", "Pfannenwender", "Topf", "Schneebesen", "Reibe", "Mixer", "Schüssel", "Messbecher", "Kelle", "Timer", "Zange", "Sieb", "Sparschäler", "Nudelholz"]
+  }
+}
