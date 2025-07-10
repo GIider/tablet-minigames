@@ -1,5 +1,5 @@
-﻿import { showVictoryScreen } from '../_Shared/victoryScreen.js';
-import { currentLang, loadTranslations, translateUI } from '../_Shared/language.js';
+﻿import { showVictoryScreen } from '../Shared/victoryScreen.js';
+import { currentLang, loadTranslations, translateUI } from '../Shared/language.js';
 
 let words = [];
 let allCategories = {};
@@ -263,7 +263,7 @@ function toggleAdvancedSettings() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const header = await fetch('../_Shared/header.html').then(res => res.text());
+  const header = await fetch('../Shared/header.html').then(res => res.text());
   document.getElementById('sharedHeader').innerHTML = header;
 
   translations = await loadTranslations('translations.json');

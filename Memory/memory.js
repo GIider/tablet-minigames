@@ -1,9 +1,9 @@
-﻿import { showVictoryScreen } from '../_Shared/victoryScreen.js';
-import { currentLang, loadTranslations, translateUI } from '../_Shared/language.js';
+﻿import { showVictoryScreen } from '../Shared/victoryScreen.js';
+import { currentLang, loadTranslations, translateUI } from '../Shared/language.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
   // Load header
-  const header = await fetch('../_Shared/header.html').then(res => res.text());
+  const header = await fetch('../Shared/header.html').then(res => res.text());
   document.getElementById('sharedHeader').innerHTML = header;
 
   // Load translations
