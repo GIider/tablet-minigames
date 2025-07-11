@@ -212,19 +212,45 @@ function initGame() {
   drawWordList();
 }
 
+let startPos = null;
+let currentDirection = null;
+
 document.addEventListener("pointerdown", e => {
   const cell = document.elementFromPoint(e.clientX, e.clientY);
   if (cell?.classList.contains("cell")) {
     isDragging = true;
     selected = [cell.dataset.pos];
+    startPos = cell.dataset.pos.split('-').map(Number);
+    currentDirection = null;
     cell.classList.add("highlight");
   }
 });
 
 document.addEventListener("pointermove", e => {
-  if (!isDragging) return;
+  if (!isDragging || !startPos) return;
+
   const cell = document.elementFromPoint(e.clientX, e.clientY);
-  if (cell?.classList.contains("cell") && !selected.includes(cell.dataset.pos)) {
+  if (!cell?.classList.contains("cell")) return;
+
+  const pos = cell.dataset.pos.split('-').map(Number);
+  if (selected.includes(cell.dataset.pos)) return;
+
+  if (selected.length === 1) {
+    // Determine direction after second cell
+    currentDirection = [pos[0] - startPos[0], pos[1] - startPos[1]];
+    const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+    const norm = Math.abs(gcd(currentDirection[0], currentDirection[1]));
+    currentDirection = currentDirection.map(n => n / norm);
+  }
+
+  // Check direction consistency
+  const lastPos = selected[selected.length - 1].split('-').map(Number);
+  const delta = [pos[0] - lastPos[0], pos[1] - lastPos[1]];
+  if (
+    currentDirection &&
+    delta[0] === currentDirection[0] &&
+    delta[1] === currentDirection[1]
+  ) {
     selected.push(cell.dataset.pos);
     cell.classList.add("highlight");
   }
