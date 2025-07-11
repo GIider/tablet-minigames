@@ -8,6 +8,16 @@
   gap: 1rem; /* adds spacing between back and lang button */
 }
 
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #111;
+  border-bottom: 1px solid #333;
+  gap: 1rem; /* adds spacing between back and lang button */
+}
+
 .back-link {
   color: #fff;
   font-size: 1.4rem; /* bigger */

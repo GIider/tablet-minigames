@@ -50,7 +50,7 @@ export function toggleLanguage() {
 export function updateLangButton() {
   const btn = document.getElementById('languageButton');
   if (btn) {
-    btn.textContent = currentLang === 'en' ? '' : '';
+    btn.textContent = currentLang === 'en' ? '🇬🇧' : '🇩🇪';
     console.log("[i18n] Language button updated:", btn.textContent);
   } else {
     console.warn("[i18n] Language button not found");

@@ -5,58 +5,78 @@ body {
   color: #f0f0f0;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+}
+
+header.navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+header.navbar .back-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 20px;
 }
 
 h1 {
-  margin-top: 10px;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* SETTINGS PANEL */
+.settings-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  max-width: 400px;
+  background: #2a2a2a;
+  border-radius: 12px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+.settings-panel label {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.settings-panel input,
+.settings-panel select {
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #3a3a3a;
   color: #fff;
 }
 
-/* CONTROL PANEL */
-.language-toggle {
-  margin: 10px;
+.settings-panel button {
+  font-size: 1rem;
+  padding: 10px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.config-panel {
-  margin: 20px auto;
-  max-width: 600px;
-}
-
-.control-row {
-  margin-bottom: 10px;
+.settings-panel button:hover {
+  background: #45a049;
 }
 
 .flex {
   display: flex;
   justify-content: center;
   gap: 10px;
-}
-
-#controls input,
-#controls select {
-  width: 100px;
-  text-align: center;
-}
-
-#controls label {
-  font-size: 0.9em;
-}
-
-.config-table {
-  margin: 10px auto;
-  border-collapse: collapse;
-}
-
-.config-table td {
-  padding: 5px 10px;
-  text-align: left;
-}
-
-#toggleAdvanced {
-  margin-left: 10px;
-  font-size: 1em;
-  padding: 6px 10px;
+  flex-wrap: wrap;
 }
 
 /* GRID LAYOUT */
@@ -191,3 +211,18 @@ button {
 button:hover {
   background: #555;
 }
+
+#advancedSettings {
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+#advancedSettings.show {
+  max-height: 200px;
+  opacity: 1;
+}
+

@@ -8,15 +8,19 @@
   <link rel="stylesheet" href="memory.css" />
 </head>
 <body>
-  <div id="sharedHeader"></div>
 
-  <h1 data-i18n="title">Emoji Memory Game 🃏</h1>
+  <header class="navbar">
+    <a href="../index.html" class="back-link">←</a>
+    <h1 data-i18n="title">Emoji Memory Game 🃏</h1>
+  </header>
 
-  <div>
-    <label for="themeSelect" data-i18n="chooseTheme">Choose Theme:</label>
+  <fieldset class="settings-panel">
+    <legend data-i18n="settingsLegend">🎮 Einstellungen</legend>
+
+    <label for="themeSelect">🧩 <span data-i18n="chooseTheme">Choose Theme:</span></label>
     <select id="themeSelect"></select>
 
-    <label for="difficultySelect" data-i18n="difficulty">Difficulty:</label>
+    <label for="difficultySelect">🧠 <span data-i18n="difficulty">Difficulty:</span></label>
     <select id="difficultySelect">
       <option value="easy" data-i18n="easy">Easy (4 pairs)</option>
       <option value="medium" selected data-i18n="medium">Medium (8 pairs)</option>
@@ -24,13 +28,13 @@
       <option value="extreme" data-i18n="extreme">Extreme (16 pairs)</option>
     </select>
 
-    <label>
+    <label class="checkbox-label">
       <input type="checkbox" id="peekToggle" />
-      <span data-i18n="peek">Peek at cards on start</span>
+      👀 <span data-i18n="peek">Peek at cards on start</span>
     </label>
 
-    <button id="startBtn" data-i18n="startGame">Start Game</button>
-  </div>
+    <button id="startBtn" data-i18n="startGame">🚀 Start Game</button>
+  </fieldset>
 
   <div id="gameBoard"></div>
   <div id="misses" data-i18n="misses">Misses: 0</div>

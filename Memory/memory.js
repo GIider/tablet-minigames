@@ -23,10 +23,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const difficultySelect = document.getElementById("difficultySelect");
   const peekToggle = document.getElementById("peekToggle");
 
-  // Load header
-  const header = await fetch('../Shared/header.html').then(res => res.text());
-  document.getElementById('sharedHeader').innerHTML = header;
-
   // Load translations
   const translations = await loadTranslations('translations.json');
   translateUI();

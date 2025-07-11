@@ -1,6 +1,7 @@
 ﻿{
   "en": {
     "title": "🌙 Word Search",
+    "settingsLegend": "🎮 Settings",
     "category": "📚 Category:",
     "width": "🔲 Width:",
     "height": "🔳 Height:",
@@ -18,6 +19,7 @@
   },
   "de": {
     "title": "🌙 Wortsuche",
+    "settingsLegend": "🎮 Einstellungen",
     "category": "📚 Kategorie:",
     "width": "🔲 Breite:",
     "height": "🔳 Höhe:",

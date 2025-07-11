@@ -3,63 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Word Search Game</title>
+  <title data-i18n="title">🌙 Word Search</title>
   <link rel="stylesheet" href="../Shared/base.css" />
   <link rel="stylesheet" href="../Shared/victoryScreen.css" />
   <link rel="stylesheet" href="wordsearch.css" />
 </head>
 <body>
-<div id="sharedHeader"></div>
 
-  <h1 data-i18n="title">🌙 Word Search</h1>
-  <div id="controls" class="config-panel">
-    <div class="control-row">
-      <label for="categorySelect" data-i18n="category">📚 Category:</label>
-      <select id="categorySelect"></select>
+  <header class="navbar">
+    <a href="../index.html" class="back-link">←</a>
+    <h1 data-i18n="title">🌙 Word Search</h1>
+  </header>
+
+  <fieldset class="settings-panel">
+    <legend data-i18n="settingsLegend">Settings</legend>
+
+    <!-- CATEGORY -->
+    <label for="categorySelect" data-i18n="category"></label>
+    <select id="categorySelect"></select>
+
+    <!-- DIFFICULTY -->
+    <label for="difficultySelect" data-i18n="difficulty"></label>
+    <select id="difficultySelect">
+      <option value="easy" data-i18n="easy"></option>
+      <option value="medium" data-i18n="medium"></option>
+      <option value="hard" data-i18n="hard"></option>
+    </select>
+
+    <!-- WORD COUNT -->
+    <label for="wordCount" data-i18n="wordCount"></label>
+    <input type="number" id="wordCount" value="4" min="1" max="50" />
+
+    <!-- CONTROLS -->
+    <div class="flex">
+      <button id="startButton" data-i18n="start"></button>
+      <button id="toggleAdvanced" data-i18n="settings">⚙️</button>
     </div>
 
-<div class="control-row flex">
-  <button id="startButton" data-i18n="start">🎮 Start Game</button>
-  <div class="button-group">
-    <button id="toggleAdvanced" data-i18n="settings">⚙️</button>
-  </div>
-</div>
+    <!-- ADVANCED SETTINGS -->
+    <div id="advancedSettings">
+      <label for="gridWidth" data-i18n="width"></label>
+      <input type="number" id="gridWidth" value="10" min="5" max="30" />
 
-    <div id="advancedSettings" style="display: none;">
-      <table class="config-table">
-        <tr>
-          <td><label for="gridWidth" data-i18n="width">🔲 Width:</label></td>
-          <td><input type="number" id="gridWidth" value="10" min="5" max="30"></td>
-        </tr>
-        <tr>
-          <td><label for="gridHeight" data-i18n="height">🔳 Height:</label></td>
-          <td><input type="number" id="gridHeight" value="10" min="5" max="30"></td>
-        </tr>
-        <tr>
-          <td><label for="wordCount" data-i18n="wordCount">🔍 Word Count:</label></td>
-          <td><input type="number" id="wordCount" value="4" min="1" max="50"></td>
-        </tr>
-        <tr>
-          <td><label for="difficultySelect" data-i18n="difficulty">🧠 Difficulty:</label></td>
-          <td>
-            <select id="difficultySelect">
-              <option value="easy" data-i18n="easy">😌 Easy</option>
-              <option value="medium" data-i18n="medium">🤔 Medium</option>
-              <option value="hard" data-i18n="hard">🔥 Hard</option>
-            </select>
-          </td>
-        </tr>
-      </table>
+      <label for="gridHeight" data-i18n="height"></label>
+      <input type="number" id="gridHeight" value="10" min="5" max="30" />
     </div>
-  </div>
+  </fieldset>
 
   <div id="gameWrapper">
     <div class="side-list">
-      <h3 data-i18n="toFind">🔍 To Find</h3>
+      <h3 data-i18n="toFind"></h3>
       <div id="wordListToFind"></div>
-<div id="hintControls" style="display: none;">
-  <button id="hintButton" data-i18n="hint">💡 Hint</button>
-</div>
+      <div id="hintControls" style="display: none;">
+        <button id="hintButton" data-i18n="hint"></button>
+      </div>
     </div>
 
     <div id="gridContainer">

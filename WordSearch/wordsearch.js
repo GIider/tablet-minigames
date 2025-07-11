@@ -275,13 +275,10 @@ function arraysEqual(a, b) {
 
 function toggleAdvancedSettings() {
   const panel = document.getElementById("advancedSettings");
-  panel.style.display = panel.style.display === "none" ? "block" : "none";
+  panel.classList.toggle("show");
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const header = await fetch('../Shared/header.html').then(res => res.text());
-  document.getElementById('sharedHeader').innerHTML = header;
-
   translations = await loadTranslations('translations.json');
   await loadCategories();
   translateUI();

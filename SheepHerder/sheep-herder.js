@@ -7,6 +7,7 @@ import { drawTrees } from './render/environment.js';
 import { showVictoryScreen } from '../Shared/victoryScreen.js';
 import { spawnWolf, updateWolves, drawWolves, resetWolves } from './entities/wolf.js';
 import { drawHUD } from './render/hud.js';
+import { config } from './config.js';
 
 const canvas = document.getElementById("game");
 const ctx = getContext(canvas);
@@ -16,7 +17,7 @@ function draw() {
   drawTrees(ctx);
   drawObstacles(ctx);
   ctx.font = "40px serif";
-  ctx.fillText("🐏🏠", pen.x, pen.y + 40);
+  ctx.fillText(config.emojis.pen, pen.x, pen.y + 40);
   drawSheep(ctx);
   drawWolves(ctx);
   drawHUD(ctx);

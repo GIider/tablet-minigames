@@ -1,6 +1,7 @@
 ﻿{
   "en": {
     "title": "Emoji Memory Game 🃏",
+    "settingsLegend": "🎮 Settings",
     "chooseTheme": "Choose Theme:",
     "difficulty": "Difficulty:",
     "easy": "😌 Easy (4 pairs)",
@@ -24,6 +25,7 @@
   },
   "de": {
     "title": "Emoji Gedächtnisspiel 🃏",
+    "settingsLegend": "🎮 Einstellungen",
     "chooseTheme": "Thema wählen:",
     "difficulty": "Schwierigkeit:",
     "easy": "😌 Einfach (4 Paare)",
