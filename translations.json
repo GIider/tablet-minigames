@@ -1,16 +1,18 @@
-﻿{
+{
   "en": {
     "hubTitle": "🎮 Mini Game Hub",
     "welcome": "🎯 Welcome to Mini Game Hub",
     "selectGame": "Select a game to play:",
     "wordSearch": "Word Search",
-    "memoryMatch": "Memory Match"
+    "memoryMatch": "Memory Match",
+    "sheepHerder": "Sheep Herder"
   },
   "de": {
     "hubTitle": "🎮 Mini-Spielzentrale",
     "welcome": "🎯 Willkommen in der Mini-Spielzentrale",
     "selectGame": "Wähle ein Spiel:",
     "wordSearch": "Wortsuche",
-    "memoryMatch": "Gedächtnisspiel"
+    "memoryMatch": "Gedächtnisspiel",
+    "sheepHerder": "Schafhirte"
   }
 }

@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  overflow: hidden;
+  background: #2c3e50;
+  touch-action: none;
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#sharedHeader {
+  flex: 0 0 auto;
+}
+
+#game {
+  flex: 1 1 auto;
+  display: block;
+  width: 100%;
+}
+
+
+canvas {
+  display: block;
+}

@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="Shared/base.css" />
   <link rel="stylesheet" href="index.css" />
-  <script type="module" src="Shared/language.js"></script>
 </head>
 <body>
   <div id="sharedHeader"></div>
@@ -15,10 +14,10 @@
     <h1 data-i18n="welcome">🎯 Welcome to Mini Game Hub</h1>
     <p data-i18n="selectGame">Select a game to play:</p>
 
-  <div class="lang-toggle-wrapper">
-    <label data-i18n="language">Language:</label>
-    <button id="languageButton" class="lang-toggle">🇬🇧</button>
-  </div>
+    <div class="lang-toggle-wrapper">
+      <label data-i18n="language">Language:</label>
+      <button id="languageButton" class="lang-toggle">🇬🇧</button>
+    </div>
     
     <div class="game-list">
       <a href="WordSearch/wordsearch.html" class="game-card">
@@ -30,10 +29,19 @@
         <div class="emoji">🃏</div>
         <div class="label" data-i18n="memoryMatch">Memory Match</div>
       </a>
+      
+      
+      <a href="SheepHerder/sheep-herder.html" class="game-card">
+        <div class="emoji">🐑</div>
+        <div class="label" data-i18n="sheepHerder">Sheep Herder</div>
+      </a>
+
+      
     </div>
   </main>
+
+  <!-- ✅ Move scripts here -->
+  <script type="module" src="Shared/language.js"></script>
   <script type="module" src="index.js"></script>
-  
 </body>
 </html>
-
